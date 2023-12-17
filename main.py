@@ -52,17 +52,5 @@ def getTermos(request: Request):
 def getTermos(request: Request):
         return templates.TemplateResponse("sobre.html", {"request": request})
 
-# @app.get("/alterartema")
-# def getTemas(request: Request):
-#     with open("temas.txt", "r", encoding="utf-8") as arquivos:
-#         temas = arquivos.read().splitlines()
-#     return templates.TemplateResponse("alterartema.html", {"request": request, "temas": temas})
-
-# @app.post("/alterartema")
-# def postTemas(request: Request, tema: str = Form()):
-#     resposta = RedirectResponse("/alterartema", status.HTTP_302_FOUND)
-#     resposta.set_cookie(key="tema", value=tema.lower(), httponly=True, expires="2099-01-01T00:00:00Z")
-#     return resposta
-
 if __name__ == "__main__":
    uvicorn.run(app="main:app", reload=True)
