@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2? family= Krona+One & family= Montserrat & family= Poppins & display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('/assets/img/street\ wave-!1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+main{
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  padding: 50px;
+}
+
+
+
+
+.form-box h2{
+    margin-top: 20px;
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+
+
+
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 811px) {
+    header {
+        background-color: transparent;
+        backdrop-filter: blur(200px);
+
+    }
+    i#menu{
+        display:inline;
+    }
+    .navegation {
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        position: absolute;
+        top: 100px;
+        left: 200px;
+        gap: 20px;
+        width: 100%;
+        background-color: transparent;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        transition: transform 0.5s ease; /* Adicionando a transição */
+    }
+
+    .navegation.active {
+        display: flex;
+    }
+
+    .navegation a {
+        margin-left: 0; /* Removendo a margem esquerda para ocupar toda a largura */
+        text-align: center;
+    }
+
+    .navegation.active {
+        display: flex;
+    }
+
+    .btnLogin-popup {
+        margin-left: 0; /* Removendo a margem esquerda para ocupar toda a largura */
+        margin-top: 10px; /* Adicionando um espaço entre os botões */
+    }
+    .wrapper{
+        margin-top: 200px;
+
+    }
+
+}
+@media only screen and (max-width: 715px) {
+    body {
+        background: url('/assets/img/street\ wave-!1.jpg') no-repeat;
+        background-size: 290%;
+        background-position: center;
+
+
+    }
+
+    header {
+        padding: 10px 20px; /* Reduzindo o padding para economizar espaço */
+        backdrop-filter: blur(100px);
+        position: absolute;
+    }
+
+    .logo {
+        font-size: 1.5rem; /* Reduzindo o tamanho da fonte do logo */
+    }
+
+    .navegation {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 79px;
+        left: 0;
+        width: 100%;
+        background-color: transparent;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        transition: transform 0.5s ease; /* Adicionando a transição */
+    }
+
+    .navegation.active {
+        display: flex;
+    }
+
+    .navegation a {
+        margin-left: 0px; /* Removendo a margem esquerda para ocupar toda a largura */
+        text-align: center;
+        backdrop-filter: blur(100px);
+
+    }
+
+    .navegation.active {
+        display: flex;
+    }
+
+    .btnLogin-popup {
+        margin-left: 0px; /* Removendo a margem esquerda para ocupar toda a largura */
+        margin-top: 10px; /* Adicionando um espaço entre os botões */
+
+
+    }
+
+    .wrapper {
+        /* width: 90%; */
+        top: 100px;
+        position: relative;
+    }
+
+    i#menu{
+        display: flex;
+    }
+}
+@media only screen and (max-width: 430px) {
+  body{
+    background-size: 500%;
+  }
+}
+

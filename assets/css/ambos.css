@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2? family= Krona+One & family= Montserrat & family= Poppins & display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('/assets/img/street\ wave-!1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo{
+    font-size: 2rem;
+    color: #fff;
+    user-select: none;
+}
+
+
+i#menu{
+    display: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 50px;
+
+}
+
+i#menu:hover {
+    color: #fff;
+}
+
+.navegation a{
+
+    position: relative;
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+
+}
+
+.navegation a::after{
+    content: '';
+    left: 0;
+    bottom: -6px;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+
+}
+.navegation a:hover:after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.navegation .btnLogin-popup{
+
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+
+}
+
+.navegation .btnLogin-popup:hover{
+    background: #fff;
+    color: #162938;
+}
+
+li{
+    border: none;
+}
+
+.navegation2 a{
+
+    position: relative;
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    top: 50px;
+
+
+
+}
+
+.navegation2 a::after{
+    content: '';
+    left: 0;
+    bottom: -6px;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+
+}
+.navegation2 a:hover:after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.navegation2 .btnLogin-popup{
+
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+
+}
+
+.navegation2 .btnLogin-popup:hover{
+    background: #fff;
+    color: #162938;
+}
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Adicione essas classes para controlar a exibição condicional */
+
+.form-box2 {
+    display: none;
+}
+
+.form-cadastro.active-form .form-box2 {
+    display: none;
+}
+
+.form-box2.active-form {
+    display: block;
+}
+.form-box2.active-form .form-box.cadastro{
+    display: none ;
+}
+
+
+
+.form-box h2{
+    margin-top: 20px;
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+
+.form-box2 h2{
+    margin-top: 20px;
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 811px) {
+    header {
+        background-color: transparent;
+        backdrop-filter: blur(200px);
+
+    }
+    i#menu{
+        display:inline;
+    }
+    .navegation {
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        position: absolute;
+        top: 100px;
+        left: 200px;
+        gap: 20px;
+        width: 100%;
+        background-color: transparent;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        transition: transform 0.5s ease; /* Adicionando a transição */
+    }
+
+    .navegation.active {
+        display: flex;
+    }
+
+    .navegation a {
+        margin-left: 0; /* Removendo a margem esquerda para ocupar toda a largura */
+        text-align: center;
+    }
+
+    .navegation.active {
+        display: flex;
+    }
+
+    .btnLogin-popup {
+        margin-left: 0; /* Removendo a margem esquerda para ocupar toda a largura */
+        margin-top: 10px; /* Adicionando um espaço entre os botões */
+    }
+    .wrapper{
+        margin-top: 200px;
+    
+    }
+
+}
+@media only screen and (max-width: 715px) {
+    body {
+        background: url('/assets/img/street\ wave-!1.jpg') no-repeat;
+        background-size: 390%;
+        background-position: center;
+
+
+    }
+
+    header {
+        padding: 10px 20px; /* Reduzindo o padding para economizar espaço */
+        backdrop-filter: blur(100px);
+        position: absolute;
+    }
+
+    .logo {
+        font-size: 1.5rem; /* Reduzindo o tamanho da fonte do logo */
+    }
+
+    .navegation {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 79px;
+        left: 0;
+        width: 100%;
+        background-color: transparent;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        transition: transform 0.5s ease; /* Adicionando a transição */
+    }
+
+    .navegation.active {
+        display: flex;
+    }
+
+    .navegation a {
+        margin-left: 0px; /* Removendo a margem esquerda para ocupar toda a largura */
+        text-align: center;
+        backdrop-filter: blur(100px);
+
+    }
+
+    .navegation.active {
+        display: flex;
+    }
+
+    .btnLogin-popup {
+        margin-left: 0px; /* Removendo a margem esquerda para ocupar toda a largura */
+        margin-top: 10px; /* Adicionando um espaço entre os botões */
+
+
+    }
+
+    .wrapper {
+        /* width: 90%; */
+        top: 100px;
+        position: relative;
+    }
+
+    i#menu{
+        display: flex;
+    }
+}
+@media only screen and (max-width: 340px) {
+    body {
+        background: url('/assets/img/street\ wave-!1.jpg') no-repeat;
+        background-size: 750%;
+        background-position: center;
+
+
+    }
+
+    header {
+        padding: 10px 20px; /* Reduzindo o padding para economizar espaço */
+        backdrop-filter: blur(100px);
+        position: absolute;
+    }
+
+    .logo {
+        font-size: 1.5rem; /* Reduzindo o tamanho da fonte do logo */
+    }
+
+    .navegation {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 79px;
+        left: 0;
+        width: 100%;
+        background-color: transparent;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        transition: transform 0.5s ease; /* Adicionando a transição */
+    }
+
+    .navegation.active {
+        display: flex;
+    }
+
+    .navegation a {
+        margin-left: 0px; /* Removendo a margem esquerda para ocupar toda a largura */
+        text-align: center;
+        backdrop-filter: blur(100px);
+
+    }
+
+    .navegation.active {
+        display: flex;
+    }
+
+    .btnLogin-popup {
+        margin-left: 0px; /* Removendo a margem esquerda para ocupar toda a largura */
+        margin-top: 10px; /* Adicionando um espaço entre os botões */
+
+
+    }
+
+    .wrapper {
+        /* width: 90%; */
+        top: 100px;
+        position: relative;
+    }
+
+    i#menu{
+        display: flex;
+    }
+}
+
+.role-selection {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: -10px;
+    
+}
+
+.role-selection .opcao1{
+    width: 40%;
+    height: 45px;
+    background: #162938;
+    border: 2px solid #fff; /* Adicione uma borda branca de 2px */
+    box-sizing: border-box; /* Mantém a largura total incluindo a borda */
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    text-align: center; /* Centraliza o texto dentro do botão */
+}
+.role-selection .opcao2{
+    width: 40%;
+    height: 45px;
+    background: #162938;
+    border: 2px solid #fff; /* Adicione uma borda branca de 2px */
+    box-sizing: border-box; /* Mantém a largura total incluindo a borda */
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    text-align: center; /* Centraliza o texto dentro do botão */
+}
+
+.role-selection input {
+    margin-right: 5px;
+}
+
+.form-box.cadastro .input-box:nth-last-child(2) {
+    display: none;
+}
+
+
+
+.form-box.cadastro input[type="radio"] {
+    display: none;
+}
+
+.form-box.cadastro input[type="radio"]:checked + label + .input-box:nth-last-child(2) {
+    display: block;
+}
+
+.form-box.cadastro input[type="radio"]:checked + label + .input-box:last-child {
+    display: none;
+}

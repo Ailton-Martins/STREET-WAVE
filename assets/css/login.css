@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2? family= Krona+One & family= Montserrat & family= Poppins & display=swap');
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+.wrapper .form-box.login{
+    transition: transform .18s ease;
+    transform: translateX(0);
+
+}
+.wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}

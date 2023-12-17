@@ -1,0 +1,95 @@
+{% extends "index.html" %}
+
+{%block titulo %}Endereço{% endblock %}
+
+{% block principal %}
+<!-- <!DOCTYPE html>
+<html lang="pt-br"> -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/ambos.css">
+    <link rel="stylesheet" href="assets/css/endereco.css">
+    <title>endereco</title>
+    
+</head>
+<body>
+    
+
+    <div class="wrapper1">
+        <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+        <div class="form-box cadastro">
+            <h2>Endereço</h2>
+            <span id="message"></span>
+            <form action="cadastro_finalizado">
+                <div class="input-box">
+                   
+                    <input 
+                    type="number" 
+                    v-model="endereco.cep"
+                    @change="cepAlteradoEvento"
+                    id="cep" 
+                    name="cep" 
+                    minlength="8"
+                    maxlength="8" 
+                    required>
+                    <label>CEP</label>
+                </div>
+                <div class="input-box">
+                 
+                    <input 
+                    type="endereco"
+                    id="logradouro"
+                    v-model="endereco.logradouro"
+                    required>
+                    <label>Rua</label>
+                </div>
+
+                <div class="input-box" >
+                 
+                    <input 
+                    type="bairro" 
+                    id="bairro"
+                    v-model="endereco.bairro"
+                    required>
+                    <label>Bairro</label>
+                </div>
+
+                <div class="input-box">
+                 
+                    <input 
+                    type="municipio" 
+                    id="localidade"
+                    v-model="endereco.localidade"
+                    required>
+                    <label>Cidade</label>
+                </div>
+
+                <div class="input-box">
+                    
+                    <input 
+                    type="estado"
+                    id="uf"
+                    v-model="endereco.uf"
+                    required>
+                    <label>UF</label>
+                </div>
+                
+                <button type="submit" class="btn">Concluir Cadastro</button>
+                <div class="login-register">
+                    <p>Já possui uma conta?<a href="index" class="login-link">Login</a></p>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <script src="assets/js/script2.js"></script>
+    
+</body>
+<!-- </html> -->
+{% endblock%}

@@ -1,0 +1,71 @@
+{% extends "index.html" %}
+
+{%block titulo %}Cadastro Cliente{% endblock %}
+
+{% block principal %}
+<!-- <!DOCTYPE html>
+<html lang="pt-br"> -->
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="assets/css/styles.css">
+      <link rel="stylesheet" href="assets/css/login.css">
+      <link rel="stylesheet" href="assets/css/cliente.css">
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      <nav><a href="endereco"></a></nav>
+      <nav><a href="blog"></a></nav>
+      <nav><a href="sobre"></a></nav>
+      <title>Cliente</title>
+
+  </head>
+  <body>
+    <main>
+      <div class="form-box cadastro">
+
+          <h2>Cadastro Cliente</h2>
+          <form action="endereco">
+              <div class="input-box">
+                  <span class="icon">
+                      <ion-icon name="person"></ion-icon>
+                  </span>
+                  <input type="name" required>
+                  <label>Nome</label>
+              </div>
+              <div class="input-box">
+                  <span class="icon">
+                      <ion-icon name="mail"></ion-icon>
+                  </span>
+                  <input type="email" required>
+                  <label>Email</label>
+              </div>
+
+              <div class="input-box">
+                  <span class="icon">
+                      <ion-icon name="lock-closed"></ion-icon>
+                  </span>
+                  <input type="password" required>
+                  <label>Senha</label>
+              </div>
+              <div class="remember-forgot">
+                  <label><input type="checkbox" required>Aceito os termos & condições</label>
+              </div>
+              <button type="submit" class="btn">Próximo Etapa</button>
+              <div class="login-register">
+                  <p>Já possui uma conta?<a href="/" class="login-link">Login</a></p>
+              </div>
+            <div class="login-register">
+                <p>Deseja escolher outra opção?<a href="opcoes" class="login-link">Voltar</a></p>
+            </div>
+          </form>
+
+
+      </div>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   
+
+  </body>
+
+<!-- </html> -->
+{% endblock%}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/login.css">
+  <link rel="stylesheet" href="assets/css/ambos.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <nav><a href="endereco"></a></nav>
+  <nav><a href="blog"></a></nav>
+  <nav><a href="sobre"></a></nav>
+  <title>Street Wave ::
+    {%block titulo %}Pagina Principal{% endblock %}
+</title>
+
+</head>
+{% block principal %}
+<body>
+  <header>
+    <h2 class="logo">Street Wave</h2>
+    <i class='bx bx-menu' id="menu"></i>
+    <nav class="navegation" id="itens">
+      <a href="lojasemcadastro">Loja</a>
+      <a href="blog">Blog</a>
+      <a href="sobre">Sobre</a>
+      <button class="btnLogin-popup">Login</button>
+
+
+
+
+    </nav>
+
+  </header>
+  <div class="wrapper">
+    <span class="icon-close">
+      <ion-icon name="close"></ion-icon>
+    </span>
+    <div class="form-box login">
+      <h2>Login</h2>
+      <form action="lojacomcadastro">
+        <div class="input-box">
+          <span class="icon">
+            <ion-icon name="mail"></ion-icon>
+          </span>
+          <input type="email" required>
+          <label>Email</label>
+        </div>
+
+        <div class="input-box">
+          <span class="icon">
+            <ion-icon name="lock-closed"></ion-icon>
+          </span>
+          <input type="password" required>
+          <label>Senha</label>
+        </div>
+        <div class="remember-forgot">
+          <label><input type="checkbox">Relembre-me</label>
+          <a href="#">Esqueceu sua senha?</a>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div class="login-register">
+          <p>Ainda não tem uma conta?<a href="opcoes" class="register-link">Cadastrar</a></p>
+        </div>
+      </form>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+  </div>  
+  <script src="assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+{% endblock %}  
+</html>
